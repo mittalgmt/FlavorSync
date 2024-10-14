@@ -24,12 +24,12 @@ export class RegisterComponent {
   passwordMatchValidator: ValidatorFn = (control:AbstractControl) : null =>
   {
     const password = control.get('password');
-    const confirempassword = control.get('confirmpassword')
+    const confirmpassword = control.get('confirmpassword')
 
-    if(password && confirempassword && password.value != confirempassword.value)
-      confirempassword?.setErrors({passwordMismatch:true})
+    if(password && confirmpassword && password.value != confirmpassword.value)
+      confirmpassword?.setErrors({passwordMismatch:true})
     else
-    confirempassword?.setErrors(null)
+    confirmpassword?.setErrors(null)
     return null;
   }
 
@@ -41,7 +41,7 @@ export class RegisterComponent {
       Validators.required,
       Validators.minLength(6),
       Validators.pattern(/(?=.*[^a-zA-Z0-9])/)]],
-    confirempassword : [''],
+    confirmpassword : [''],
     
   },{validators:this.passwordMatchValidator})
 

@@ -37,9 +37,9 @@
       </div>
     </div>
     <div class="mb-3">
-      <input class="form-control bg-body-secondary" placeholder="Confirm Password" formControlName="confirmPassword">
+      <input class="form-control bg-body-secondary" placeholder="Confirm Password" formControlName="confirmpassword">
       <div class="error-feedback" 
-      *ngIf="hasDisplayableError('confirmPassword') && form.controls.confirempassword.hasError('passwordMismatch')">
+      *ngIf="hasDisplayableError('confirmpassword') && form.controls.confirmpassword.hasError('passwordMismatch')">
         Passwords doesn't match.
       </div>
     </div>
@@ -49,3 +49,37 @@
       </button>
     </div>
   </form>
+  <style>
+    .register-container {
+    background-color: white; /* Background color for the form */
+}
+
+.register-container .form-control {
+    border-radius: 8px;
+    transition: border 0.3s ease-in-out;
+}
+
+.register-container .form-control:focus {
+    border-color: #28a745; /* Green focus border */
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
+}
+
+.error-feedback {
+    font-size: 0.9rem; /* Smaller font size for error messages */
+}
+
+.shadow {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for the form container */
+}
+.btn {
+    background: linear-gradient(135deg, #28a745, #6DD5FA); /* Gradient from green to light blue */
+    border: none; /* Remove default border */
+    color: white; /* Text color */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation on hover */
+}
+
+.btn:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+  </style>

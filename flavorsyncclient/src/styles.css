@@ -9,3 +9,8 @@ body{
     margin: 0.3rem !important;
     margin-top: 0.1rem !important;
   }
+
+.bg-primar-subtle {
+    background-color: #DEDEDE; /* Pistachio green */
+}
+
