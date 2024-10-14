@@ -3,92 +3,85 @@ using Flavorsyncserver.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 
-namespace Flavorsyncserver
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Services from Identity Core.
+builder.Services
+    .AddIdentityApiEndpoints<User>()
+    .AddEntityFrameworkStores<flavorsyncDbContext>();
+
+builder.Services.Configure<IdentityOptions>(options =>
 {
-    public class Program
+    options.Password.RequireDigit = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireLowercase = false;
+    options.User.RequireUniqueEmail = true;
+});
+
+builder.Services.AddDbContext<flavorsyncDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DevDB")));
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+#region Config. CORS
+app.UseCors(options =>
+    options.WithOrigins("http://localhost:4200")
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+#endregion
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app
+    .MapGroup("/api")
+    .MapIdentityApi<User>();
+
+
+
+app.MapPost("/api/signup", async (
+    UserManager<User> userManager,
+    [FromBody] UserRegistrationModel userRegistrationModel
+    ) =>
+{
+    User user = new User()
     {
-        public static void Main(string[] args)
-        {
-            var builder = WebApplication.CreateBuilder(args);
+        UserName = userRegistrationModel.Email,
+        Email = userRegistrationModel.Email,
+        FullName = userRegistrationModel.FullName,
+    };
+    var result = await userManager.CreateAsync(
+        user,
+        userRegistrationModel.Password);
 
-            // Add services to the container.
-            builder.Services.AddControllers();
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+    if (result.Succeeded)
+        return Results.Ok(result);
+    else
+        return Results.BadRequest(result);
+});
 
-            // Configure Identity Core services
-            builder.Services
-                .AddIdentityCore<User>()
-                .AddEntityFrameworkStores<flavorsyncDbContext>()
-                .AddDefaultTokenProviders();
+app.Run();
 
-            // Configure Identity options
-            builder.Services.Configure<IdentityOptions>(options =>
-            {
-                options.Password.RequireDigit = false;
-                options.Password.RequireUppercase = false;
-                options.Password.RequireLowercase = false;
-                options.User.RequireUniqueEmail = true;
-            });
-
-            // Configure DbContext with SQL Server
-            builder.Services.AddDbContext<flavorsyncDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DevDB")));
-
-            var app = builder.Build();
-
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-                app.UseSwagger();
-                app.UseSwaggerUI();
-            }
-
-            // Configure CORS
-            app.UseCors(options =>
-                options.WithOrigins("http://localhost:4200")
-                       .AllowAnyMethod()
-                       .AllowAnyHeader());
-
-            app.UseAuthorization();
-
-            app.MapControllers();
-
-            // Configure Identity API
-            app.MapGroup("/api")
-               .MapIdentityApi<User>();
-
-            // Sign up route
-            app.MapPost("/api/signup", async (
-                UserManager<User> userManager,
-                [FromBody] UserRegistrationModel userRegistrationModel
-            ) =>
-            {
-                User user = new User
-                {
-                    UserName = userRegistrationModel.Email,
-                    Email = userRegistrationModel.Email,
-                    FullName = userRegistrationModel.FullName,
-                };
-
-                var result = await userManager.CreateAsync(user, userRegistrationModel.Password);
-
-                if (result.Succeeded)
-                    return Results.Ok(result);
-                else
-                    return Results.BadRequest(result);
-            });
-
-            app.Run();
-        }
-    }
-
-    // User registration model class
-    public class UserRegistrationModel
-    {
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public string FullName { get; set; }
-    }
+public class UserRegistrationModel
+{
+    public string Email { get; set; }
+    public string Password { get; set; }
+    public string FullName { get; set; }
 }

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Migrations\\20241014163113_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241014163113_user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF351190-2768-46C4-A96E-F29A3F415301}|Flavorsyncserver.csproj|d:\\mittal\\net\\flavorsync\\flavorsyncserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF351190-2768-46C4-A96E-F29A3F415301}|Flavorsyncserver.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BF351190-2768-46C4-A96E-F29A3F415301}|Flavorsyncserver.csproj|d:\\mittal\\net\\flavorsync\\flavorsyncserver\\migrations\\20241012043811_nameisaddedinuseridenttity-2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF351190-2768-46C4-A96E-F29A3F415301}|Flavorsyncserver.csproj|solutionrelative:migrations\\20241012043811_nameisaddedinuseridenttity-2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Migrations\\20241012043407_nameIsAddedInUserIdenttity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241012043407_nameIsAddedInUserIdenttity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF351190-2768-46C4-A96E-F29A3F415301}|Flavorsyncserver.csproj|d:\\mittal\\net\\flavorsync\\flavorsyncserver\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,6 +41,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{BF351190-2768-46C4-A96E-F29A3F415301}|Flavorsyncserver.csproj|d:\\mittal\\net\\flavorsync\\flavorsyncserver\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF351190-2768-46C4-A96E-F29A3F415301}|Flavorsyncserver.csproj|solutionrelative:weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF351190-2768-46C4-A96E-F29A3F415301}|Flavorsyncserver.csproj|d:\\mittal\\net\\flavorsync\\flavorsyncserver\\migrations\\20241012043407_nameisaddedinuseridenttity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF351190-2768-46C4-A96E-F29A3F415301}|Flavorsyncserver.csproj|solutionrelative:migrations\\20241012043407_nameisaddedinuseridenttity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,24 +54,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 318,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20241014163113_user.cs",
+              "DocumentMoniker": "D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Migrations\\20241014163113_user.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241014163113_user.cs",
+              "ToolTip": "D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Migrations\\20241014163113_user.cs",
+              "RelativeToolTip": "Migrations\\20241014163113_user.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T16:31:14.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADsAAAAGAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T03:47:56.624Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "flavorsyncDbContext.cs",
               "DocumentMoniker": "D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Data\\flavorsyncDbContext.cs",
               "RelativeDocumentMoniker": "Data\\flavorsyncDbContext.cs",
@@ -75,12 +96,11 @@
               "RelativeToolTip": "Data\\flavorsyncDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T04:02:59.987Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T04:02:59.987Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "20241012043811_nameIsAddedInUserIdenttity-2.cs",
               "DocumentMoniker": "D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Migrations\\20241012043811_nameIsAddedInUserIdenttity-2.cs",
               "RelativeDocumentMoniker": "Migrations\\20241012043811_nameIsAddedInUserIdenttity-2.cs",
@@ -88,12 +108,11 @@
               "RelativeToolTip": "Migrations\\20241012043811_nameIsAddedInUserIdenttity-2.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T04:38:12.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T04:38:12.166Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "20241012043407_nameIsAddedInUserIdenttity.cs",
               "DocumentMoniker": "D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Migrations\\20241012043407_nameIsAddedInUserIdenttity.cs",
               "RelativeDocumentMoniker": "Migrations\\20241012043407_nameIsAddedInUserIdenttity.cs",
@@ -101,8 +120,7 @@
               "RelativeToolTip": "Migrations\\20241012043407_nameIsAddedInUserIdenttity.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T04:34:08.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T04:34:08.374Z"
             },
             {
               "$type": "Document",
@@ -114,8 +132,7 @@
               "RelativeToolTip": "Model\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T04:26:58.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T04:26:58.691Z"
             },
             {
               "$type": "Document",
@@ -127,8 +144,7 @@
               "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T04:23:57.102Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T04:23:57.102Z"
             },
             {
               "$type": "Document",
@@ -140,21 +156,19 @@
               "RelativeToolTip": "Migrations\\20241012041716_initial.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T04:17:16.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T04:17:16.579Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "Flavorsyncserver",
+              "Title": "Flavorsyncserver.csproj",
               "DocumentMoniker": "D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Flavorsyncserver.csproj",
               "RelativeDocumentMoniker": "Flavorsyncserver.csproj",
               "ToolTip": "D:\\MITTAL\\Net\\FlavorSync\\Flavorsyncserver\\Flavorsyncserver.csproj",
               "RelativeToolTip": "Flavorsyncserver.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-12T04:16:05.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T04:16:05.291Z"
             },
             {
               "$type": "Document",
@@ -166,8 +180,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-12T04:09:45.966Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-12T04:09:45.966Z"
             },
             {
               "$type": "Document",
@@ -179,12 +192,7 @@
               "RelativeToolTip": "WeatherForecast.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T03:48:22.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "WhenOpened": "2024-10-12T03:48:22.59Z"
             }
           ]
         },
