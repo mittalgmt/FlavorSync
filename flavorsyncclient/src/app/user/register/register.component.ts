@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, ReactiveFormsModule, ValidatorFn, Validators } from '@angular/forms';
 import { combineLatest } from 'rxjs';
 import { FirstKeyPipe } from "../../shared/pipes/first-key.pipe";
+import { AuthService } from '../../shared/services/auth.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +15,10 @@ import { FirstKeyPipe } from "../../shared/pipes/first-key.pipe";
 })
 export class RegisterComponent {
 
-  constructor(public formBuilder: FormBuilder){}
+  constructor(
+    public formBuilder: FormBuilder,
+    private service: AuthService,
+    private toastr: ToastrService) { }
   isSubmitted:boolean = false;
 
   passwordMatchValidator: ValidatorFn = (control:AbstractControl) : null =>
@@ -42,9 +47,41 @@ export class RegisterComponent {
 
  
 
-  onSubmit(){
+  onSubmit() {
     this.isSubmitted = true;
-    console.log(this.form);
+    if (this.form.valid) {
+      this.service.createUser(this.form.value)
+        .subscribe({
+          next: (res: any) => {
+            if (res.succeeded) {
+              this.form.reset();
+              this.isSubmitted = false;
+              this.toastr.success('New user created!', 'Registration Successful')
+            }
+          },
+          error: err => {
+            if (err.error.errors)
+              err.error.errors.forEach((x: any) => {
+                switch (x.code) {
+                  case "DuplicateUserName":
+                    break;
+
+                  case "DuplicateEmail":
+                    this.toastr.error('Email is already taken.', 'Registration Failed')
+                    break;
+
+                  default:
+                    this.toastr.error('Contact the developer', 'Registration Failed')
+                    console.log(x);
+                    break;
+                }
+              })
+            else
+              console.log('error:',err);
+          }
+
+        });
+    }
   }
 
   hasDisplayableError(controlName: string):Boolean{
